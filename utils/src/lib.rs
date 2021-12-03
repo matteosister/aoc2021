@@ -8,6 +8,7 @@ where
 {
     input
         .lines()
+        .filter(|l| !l.is_empty())
         .map(|line| line.parse::<T>().unwrap())
         .collect()
 }
